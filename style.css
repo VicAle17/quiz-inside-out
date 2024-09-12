@@ -1,0 +1,101 @@
+.container{
+    font-family: 'lucida calligraphy';
+    justify-content: center;
+    
+}
+.sfondo{
+    background: url('feliz.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    
+}
+#quiz{
+    background-image: url('sfondoquiz2.jpeg');
+    background-position: center;
+  background-size: cover;
+  /* background-size: 100%; */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+button{
+    position: relative;
+    border:none;
+    transition: .4s ease-in;
+    z-index:1;
+    width:200px !important;
+    height: 35px;
+    background-color: #654236 !important;
+    border-color: #2a5461 !important;
+    color:white !important;
+}
+button::before,button::after{
+    content: "";
+    position:absolute;
+    z-index:-1;
+} 
+.mybtn1:hover{
+   border: 2px solid #654236 !important;
+   color: #654236 !important;
+   background-color: white !important;
+   cursor:pointer;
+}
+
+nav{
+    background-color: #b0f2b4 !important;
+}
+
+h2{
+    padding-left: 25%;
+}
+
+.presult{
+    color:#8AB0AB;
+}
+
+.login-box{
+    width: 200px;
+    border-radius: 40px;
+    border-color: whitesmoke;
+    background-color: #D2C1B2;
+}
+
+.giu{
+    color: #563324;
+}
+
+.mybtn2{
+    background-color: #2D4D47 !important;
+    border-color: #5E747F;
+}
+
+.mybtn2:hover{
+    background-color: #462255 !important;
+    border-color: #5E747F;
+
+}
+
+.s1 {
+    max-width: 400px;
+    border-radius: 1.3rem;
+    border:2px solid blue; 
+    margin: 3rem 4rem;
+}
+
+p{
+    font-weight: bold;
+}
+
+form div{
+    border:5px solid #b0f2b4; 
+    border-radius: 1rem;
+    padding:0.5rem;
+    background-color: white;
+    opacity: 0.75 ;
+    margin-bottom: 1rem;
+}
+
+
+.container-fluid .navbar-brand{
+    margin-left:2.5rem
+}

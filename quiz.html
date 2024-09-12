@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz!</title>
+    <link href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body id="quiz">
+    <nav class="navbar ">
+        <div class="container-fluid">
+            <a class="navbar-brand">Benvenuto <span style="color:red; font-size:larger;" id="valore_localstorage">!</span></a>
+          <!-- Example single danger button -->
+            <div class="btn-group" style="margin-right: 5rem;">
+                <button class="btn mybtn2" type="submit" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+   
+    <section style="max-width: 1600px; margin: 3rem 4rem">
+        <form id="myForm" class="container mt-2">
+          
+            <div data-group="d1">
+                <p>Come ti senti quando ti trovi in un ambiente nuovo e pieno di persone che non conosci?</p>
+                <input type="radio" id="d1-1" name="d1" value="disgusto">
+                <label for="d1-1">Essere circondate da persone sconosciute è insopportabile.</label><br>
+                <input type="radio" id="d1-2" name="d1" value="gioia">
+                <label for="d1-2">Entusiasta! Adoro conoscere nuove persone e fare nuove amicizie.</label><br>  
+                <input type="radio" id="d1-3" name="d1" value="imbarazzo">
+                <label for="d1-3">Insicuro/a e un po' imbarazzato/a.</label><br>
+                <input type="radio" id="d1-4" name="d1" value="tristezza">
+                <label for="d1-4">Tenderei a stare un po' in disparte, osservando gli altri.</label><br>
+                <input type="radio" id="d1-5" name="d1" value="invidia">
+                <label for="d1-5">Mi sentirei un po' invidioso/a se vedessi gli altri divertirsi e socializzare facilmente. </label><br><br>
+            </div>
+          
+            <div data-group="d2">
+                <p>C'è qualcosa che ti fa arrabbiare facilmente?</p>
+                <input type="radio" id="d2-1" name="d2" value="paura">
+                <label for="d2-1"> Ingiustizie e prepotenze mi fanno davvero arrabbiare.</label><br>
+                <input type="radio" id="d2-2" name="d2" value="tristezza">
+                <label for="d2-2">Non mi arrabbio quasi mai, preferisco sempre cercare di capire e mediare.</label><br>  
+                <input type="radio" id="d2-3" name="d2" value="ansia">
+                <label for="d2-3"> Mi innervosisco quando le cose non vanno come voglio o quando i miei piani vengono sconvolti.</label><br>
+                <input type="radio" id="d2-4" name="d2" value="disgusto">
+                <label for="d2-4">Certe persone o situazioni mi danno fastidio.</label><br>
+                <input type="radio" id="d2-5" name="d2" value="rabbia">
+                <label for="d2-5">Mi arrabbio facilmente quando qualcuno mi critica o mette in dubbio le mie capacità.</label><br><br>
+            </div>
+          
+            <div data-group="d3">
+                <p>Come trascorri il tuo tempo libero?</p>
+                <input type="radio" id="d3-1" name="d3" value="gioia">
+                <label for="d3-1"> Mi piace dedicarmi a hobby creativi e fantasiosi.</label><br>
+                <input type="radio" id="d3-2" name="d3" value="tristezza">
+                <label for="d3-2">Leggo, guardo film o ascolto musica per rilassarmi.</label><br>  
+                <input type="radio" id="d3-3" name="d3" value="invidia">
+                <label for="d3-3">Mi tengo aggiornato/a sugli ultimi trend.</label><br>
+                <input type="radio" id="d3-4" name="d3" value="paura">
+                <label for="d3-4">Mi piace stare da solo/a a riflettere.</label><br>
+                <input type="radio" id="d3-5" name="d3" value="ennui">
+                <label for="d3-5">Tendo a dormire tutto il tempo</label><br><br>
+            </div>
+            <div data-group="d4">
+                <p>Come ti poni di fronte a un fallimento?</p>
+                <input type="radio" id="d4-1" name="d4" value="tristezza">
+                <label for="d4-1">Ci rimango male, ma cerco di imparare dai miei errori e riprovare.</label><br>
+                <input type="radio" id="d4-2" name="d4" value="rabbia">
+                <label for="d4-2">Mi arrabbio con me stesso/a e mi demoralizzo facilmente.</label><br>  
+                <input type="radio" id="d4-3" name="d4" value="gioia">
+                <label for="d4-3">Vedo il fallimento come un'occasione per crescere e migliorare.</label><br>
+                <input type="radio" id="d4-4" name="d4" value="disgusto">
+                <label for="d4-4">Ogni dettaglio del fallimento mi irrita profondamente.</label><br>
+                <input type="radio" id="d4-5" name="d4" value="ennui">
+                <label for="d4-5">Mi sento noioso/a e apatico/a quando fallisco, come se non valesse la pena impegnarsi.</label><br><br>
+            </div>
+            <div data-group="d5">
+                <p>Qual è di queste descrizioni ti si addice di più?</p>
+                <input type="radio" id="d5-1" name="d5" value="gioia">
+                <label for="d5-1">Sono sempre pieno/a di energia e adoro stare con la gente.</label><br>
+                <input type="radio" id="d5-2" name="d5" value="imbarazzo">
+                <label for="d5-2">Sono una persona sensibile e riflessiva, tendo ad isolarmi.</label><br>  
+                <input type="radio" id="d5-3" name="d5" value="ansia">
+                <label for="d5-3">Mi preoccupo spesso per il futuro e per le possibili conseguenze delle mie azioni.</label><br>
+                <input type="radio" id="d5-4" name="d5" value="invidia">
+                <label for="d5-4">Sono una persona permalosa e invidiosa, tendo a paragonarmi agli altri.</label><br>
+                <input type="radio" id="d5-5" name="d5" value="ennui">
+                <label for="d5-5">Mi annoio facilmente e ho bisogno di stimoli continui per sentirmi motivato/a.</label><br><br>
+            </div>
+            <div data-group="d6">
+                <p> Come ti senti generalmente?</p>
+                <input type="radio" id="d6-1" name="d6" value="ansia">
+                <label for="d6-1">Mi preoccupo spesso per il futuro e per le possibili conseguenze delle mie azioni.</label><br>
+                <input type="radio" id="d6-2" name="d6" value="invidia">
+                <label for="d6-2">A volte mi sento invidioso/a dei successi degli altri o di chi sembra avere una vita più felice. </label><br>  
+                <input type="radio" id="d6-3" name="d6" value="rabbia">
+                <label for="d6-3">Mi arrabbio facilmente quando vengo trattato/a ingiustamente o quando vedo qualcuno subire un torto.</label><br>
+                <input type="radio" id="d6-4" name="d6" value="disgusto">
+                <label for="d6-4">Sono attento/a ai dettagli e mi infastidiscono facilmente le cose sporche o disordinate.</label><br>
+                <input type="radio" id="d6-5" name="d6" value="paura">
+                <label for="d6-5">Temo il giudizio degli altri e tendo ad evitare le situazioni sociali.</label><br><br>
+            </div>
+            <div data-group="d7">
+                <p>Come affronti un conflitto con una person cara?</p>
+                <input type="radio" id="d7-1" name="d7" value="rabbia">
+                <label for="d7-1">Mi arrabbio e cerco di risolverlo subito, a volte alzando la voce.</label><br>
+                <input type="radio" id="d7-2" name="d7" value="disgusto">
+                <label for="d7-2">E' estremamente irritante, ogni parola sembra solo frustrazione.</label><br>  
+                <input type="radio" id="d7-3" name="d7" value="paura">
+                <label for="d7-3">Tendo ad isolarmi per evitare ulteriori conflitti</label><br>
+                <input type="radio" id="d7-4" name="d7" value="imbarazzo">
+                <label for="d7-4">Tento di capire cosa è andato storto.</label><br>
+                <input type="radio" id="d7-5" name="d7" value="ennui">
+                <label for="d7-5">Non sono mai nel torto.</label><br><br>
+            </div>
+            <div data-group="d8">
+                <p>QUal è la tua qualità migliore?</p>
+                <input type="radio" id="d8-1" name="d8" value="rabbia">
+                <label for="d8-1">Determinazione e coraggio</label><br>
+                <input type="radio" id="d8-2" name="d8" value="tristezza">
+                <label for="d8-2">Empatia e sensibilità</label><br>  
+                <input type="radio" id="d8-3" name="d8" value="gioia">
+                <label for="d8-3">Allegria e ottimismo</label><br>
+                <input type="radio" id="d8-4" name="d8" value="imbarazzo">
+                <label for="d8-4">Timidezza e adattabilità</label><br>
+                <input type="radio" id="d8-5" name="d8" value="ansia">
+                <label for="d8-5">Prudenza e organizzazione</label><br><br>
+            </div>
+            <div data-group="d9">
+                <p>Quale attività preferisci fare durante le vacanze?</p>
+                <input type="radio" id="d9-1" name="d9" value="paura">
+                <label for="d9-1">Niente di troppo emozionante come sport estremi</label><br>
+                <input type="radio" id="d9-2" name="d9" value="ansia">
+                <label for="d9-2">Pianificare tutto nei minimi dettagli per evitare problemi.</label><br>  
+                <input type="radio" id="d9-3" name="d9" value="ennui">
+                <label for="d9-3">Preferirei restare a casa.</label><br>
+                <input type="radio" id="d9-4" name="d9" value="imbarazzo">
+                <label for="d9-4">Visitare luoghi tranquilli e riflessivi come musei o parchi.</label><br>
+                <input type="radio" id="d9-5" name="d9" value="invidia">
+                <label for="d9-5">Essere al passo degli ultimi trend</label><br><br>
+            </div>
+          <a href="risultato.html">
+            <button class="btn btn-primary mb-2 mybtn2" type="button" onclick="updateSelection()">Invia</button>
+          </a>
+          
+          </form>
+    </section>
+
+</body>
+
+<script>
+    const username=localStorage.getItem("username")
+    document.getElementById("valore_localstorage").innerHTML= username
+
+    function logout(){
+        localStorage.clear()
+        window.location.href='index.html'
+    }
+
+    const dropdownToggle=document.querySelector(".dropdown-toggle")
+
+    dropdownToggle.addEventListener("click",()=>{
+        const dropdownMenu=document.querySelector("#dropdown > .menu")
+
+        dropdownMenu.classList.toggle("open");
+        dropdownToggle.classList.toggle("open")
+    })
+    
+</script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
