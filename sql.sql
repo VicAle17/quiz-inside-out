@@ -1,0 +1,6 @@
+CREATE TABLE users (
+	username VARCHAR(20) PRIMARY KEY,
+    PASSWORD VARCHAR(20) NOT NULL,
+    data DATETIME NOT NULL,
+    personaggio VARCHAR(20)
+);
